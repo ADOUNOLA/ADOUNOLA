@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADOUNOLA Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ADOUNOLA Store</h1>
+    <p>La mode casual pour tous</p>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Homme</a>
+      <a href="#">Femme</a>
+      <a href="#">Enfant</a>
+      <a href="#" onclick="toggleCart()">Panier (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Produit 1">
+      <h3>T-shirt Homme</h3>
+      <p>Prix : 20€</p>
+      <button onclick="addToCart('T-shirt Homme', 20)">Ajouter au panier</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Produit 2">
+      <h3>Robe Femme</h3>
+      <p>Prix : 35€</p>
+      <button onclick="addToCart('Robe Femme', 35)">Ajouter au panier</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Produit 3">
+      <h3>Veste Enfant</h3>
+      <p>Prix : 25€</p>
+      <button onclick="addToCart('Veste Enfant', 25)">Ajouter au panier</button>
+    </div>
+  </section>
+
+  <div id="cart">
+    <h3>Votre panier</h3>
+    <ul id="cartItems"></ul>
+    <p><strong>Total : </strong><span id="cartTotal">0</span>€</p>
+    <button onclick="toggleCart()">Fermer</button>
+    <button onclick="checkout()">Payer maintenant</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ADOUNOLA Store. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
